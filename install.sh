@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Check if the script is run as root
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root. Please use sudo."
+    exit 1
+fi
 # Check the operating system
 os_name=$(uname)
 
@@ -25,20 +30,31 @@ else
     echo "Unknown operating system: $os_name"
 fi
 
+# Function to log actions
+log_action() {
+    echo "$(date +'%Y-%m-%d %H:%M:%S') - $1"
+}
 
+log_action "Starting package installation script"
 
+# Check if apt is available
+if ! command -v apt >/dev/null 2>&1; then
+    log_action "apt package manager not found. Exiting."
+    echo "apt package manager is not available on this system."
+    exit 1
+fi
 
+# Update package lists
+log_action "Updating package lists"
+sudo apt update -y
 
+# Install packages
+PACKAGES="neovim"
+log_action "Installing packages: $PACKAGES"
+sudo apt install -y $PACKAGES
 
-
-
-
-
-
-
-
-
-
-
+log_action "Package installation complete"
+nvim --version
+echo "Packages installed successfully."
 ## Install vim plug for neovim
 #sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
