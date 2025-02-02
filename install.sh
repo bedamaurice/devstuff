@@ -48,7 +48,7 @@ if [ $APT_Install = "y" ]; then
         fi
         # Update package lists
         log_action "Updating package lists"
-        exec sudo apt update -y
+        sudo apt update -y
         # Install packages
         PACKAGES="net-tools zsh neovim"
         log_action "Installing packages: $PACKAGES"
