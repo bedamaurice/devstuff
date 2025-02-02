@@ -36,16 +36,16 @@ read APT_Install
 if [ $APT_Install = "y" ]; then
     # check if apt installed and install neovim, zsh and net-tools
     log_action "Starting package installation script"
-    if ! command -v apt >/dev/null 2>&1; then
-        log_action "apt package manager not found. Exiting."
-        echo "apt package manager is not available on this system."
-        exit 1
-    else
-        # Check if the script is run as root
-        if [ "$(id -u)" -ne 0 ]; then
-            echo "This script must be run as root. Please use sudo."
-            exit 1
-        fi
+#    if ! command -v apt >/dev/null 2>&1; then
+#        log_action "apt package manager not found. Exiting."
+#        echo "apt package manager is not available on this system."
+#        exit 1
+#   else
+#        # Check if the script is run as root
+#        if [ "$(id -u)" -ne 0 ]; then
+#            echo "This script must be run as root. Please use sudo."
+#            exit 1
+#        fi
         # Update package lists
         log_action "Updating package lists"
         sudo apt update -y
@@ -57,7 +57,7 @@ if [ $APT_Install = "y" ]; then
         nvim --version
         #zsh --version
         echo "Packages installed successfully."
-    fi
+#    fi
 fi
 
 ## Zsh as default shell and any plugins install
@@ -71,7 +71,7 @@ if [ $dshell = "y" ];then
     else 
         USER=$(whoami)
         chsh -s $(which zsh) $USER
-        exec zsh
+#        exec zsh
     fi
     echo $SHELL "is your default shell"
     echo "You want change the .zshrc config? (y=yes)"
