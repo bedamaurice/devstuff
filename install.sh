@@ -111,6 +111,8 @@ if [dshell = "y"];then
             echo "File zsh-highlighting.zsh not found"
         fi
         echo "##Plugins ends here" >> $HOME/.zshrc
+    fi
+fi
 
 ## Configure Neovim
 echo "Do you want configure neovim wit vim-plug as pluginmanager? (y=yes)"
@@ -121,7 +123,4 @@ if [ $Neovim_config = "y" ];then
     exec cp ./neovim/init.lua $HOME/.config/nvim/init.lua
     exec nvim +PluginInstall +qall
 fi
-
-
-
 
