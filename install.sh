@@ -48,11 +48,12 @@ if [ $APT_Install = "y" ]; then
 #        fi
         # Update package lists
         log_action "Updating package lists"
-        sudo apt update -y
+        sudo -u $USER apt update -y
+        # sudo -u $USER
         # Install packages
         PACKAGES="net-tools zsh neovim"
         log_action "Installing packages: $PACKAGES"
-        sudo apt install -y $PACKAGES
+        sudo -u $USER apt install -y $PACKAGES
         log_action "Package installation complete"
         nvim --version
         #zsh --version
@@ -69,7 +70,7 @@ if [ $dshell = "y" ]; then
         echo "Zsh is not installed. Please install it manually."
     else 
         USER=$(whoami)
-        sudo chsh -s $(which zsh) $USER
+        sudo -u $USER chsh -s $(which zsh) $USER
         if [ $? -eq 0 ]; then
             echo "The default shell has been changed to zsh. Please log out and log back in for the changes to take effect."
         else
