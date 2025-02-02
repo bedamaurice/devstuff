@@ -58,12 +58,13 @@ if [ $APT_Install = "y" ]; then
         #zsh --version
         echo "Packages installed successfully."
     fi
+fi
 
 ## Zsh as default shell and any plugins install
-echo "Do you want the zsh as default shell? (tip y)"
+echo "Do you want the zsh as default shell? (y=yes)"
 read dshell
 
-if [dshell = "y"];then 
+if [ $dshell = "y" ];then 
     echo "zsh will your default shell"
     if ! command -v zsh &>/dev/null;then
         echo "Zsh is not installed. Please install it manually."
