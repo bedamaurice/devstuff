@@ -70,7 +70,7 @@ if [ $dshell = "y" ];then
         echo "Zsh is not installed. Please install it manually."
     else 
         USER=$(whoami)
-        chsh -s $(which zsh) $USER
+        sudo chsh -s $(which zsh) $USER
 #        exec zsh
     fi
     echo $SHELL "is your default shell"
