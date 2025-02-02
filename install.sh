@@ -77,7 +77,7 @@ if [ $dshell = "y" ];then
     echo "You want change the .zshrc config? (y=yes)"
     read ch_zshrc
     if [ $ch_zshrc = "y" ]; then
-        exec cp ./zsh/.zshrc $HOME/.zshrc
+        cp ./zsh/.zshrc $HOME/.zshrc
         if [ -f $HOME/.zshrc];then
             echo ".zshrc is now in your home folder"
             echo "## Plugins are here:" >> $Home/.zshrc
@@ -88,14 +88,14 @@ if [ $dshell = "y" ];then
     echo "You want to use the alias-zsh? (y=yes)"
     read al_zshrc
     if [ $al_zshrc = "y" ];then
-        exec cp ./zsh/zsh-alias.zsh ~/.zsh/zsh-alias.zsh
+        cp ./zsh/zsh-alias.zsh ~/.zsh/zsh-alias.zsh
         echo source $HOME/.zsh/zsh-alias/zsh-alias.zsh >> ~/.zshrc
     fi
     echo "You want plugins like zsh-autosuggestions and syntax-higlighting?"
     read zplugin
     if [ $zplugin = "y"];then
         mkdir -p ~/.zsh
-        exec git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
         echo source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
         P_auto='~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh'
         if [ -f $P_auto ];then
@@ -119,9 +119,9 @@ fi
 echo "Do you want configure neovim wit vim-plug as pluginmanager? (y=yes)"
 read Neovim_config
 if [ $Neovim_config = "y" ];then
-    exec sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    exec cp -r ./neovim/lua $HOME/.config/nvim/lua
-    exec cp ./neovim/init.lua $HOME/.config/nvim/init.lua
-    exec nvim +PluginInstall +qall
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    cp -r ./neovim/lua $HOME/.config/nvim/lua
+    cp ./neovim/init.lua $HOME/.config/nvim/init.lua
+    nvim +PluginInstall +qall
 fi
 
