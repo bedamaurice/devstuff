@@ -69,7 +69,7 @@ if [ $dshell = "y" ]; then
     if ! command -v zsh &>/dev/null;then
         echo "Zsh is not installed. Please install it manually."
     else 
-        sudo chsh -s $(which zsh) $USER
+        sudo chsh -s "$(which zsh)" $USER
         if [ $? -eq 0 ]; then
             echo "The default shell has been changed to zsh. Please log out and log back in for the changes to take effect."
         else
