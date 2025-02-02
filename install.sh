@@ -51,7 +51,7 @@ if [ $APT_Install = "y" ]; then
         sudo apt update -y
         # sudo -u $USER
         # Install packages
-        PACKAGES="net-tools zsh neovim"
+        PACKAGES="net-tools zsh neovim fzf"
         log_action "Installing packages: $PACKAGES"
         sudo apt install -y $PACKAGES
         log_action "Package installation complete"
