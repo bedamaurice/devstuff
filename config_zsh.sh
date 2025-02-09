@@ -27,7 +27,7 @@ if [ $dshell = "y" ]; then
     read al_zshrc
     if [ $al_zshrc = "y" ]; then
         mkdir -p ~/.zsh
-        cp ./zsh/zsh-alias.zsh ~/.zsh/zsh-alias.zsh
+        cp ./zsh/zsh-alias/zsh-alias.zsh ~/.zsh/zsh-alias/zsh-alias.zsh
         echo source $HOME/.zsh/zsh-alias/zsh-alias.zsh >> ~/.zshrc
     fi
     echo "You want plugins like zsh-autosuggestions and syntax-higlighting?"
