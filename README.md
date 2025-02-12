@@ -27,32 +27,32 @@ To install the configurations from this repository, follow these steps:
    ```sh
    git clone https://github.com/bedamaurice/devstuff.git
    cd devstuff
-
+    ```
 2. UbuntuOS:
    ```sh
    ./install.sh
-
+    ```
 ## Homebrew and Iterm2 for MacOS
 To install the configuration from the offical repository https://brew.sh/
 
 1. Install Homebrew with the offical script:
    ```sh
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
+    ```
 2. Neovim install with Homebrew:
    https://formulae.brew.sh/formula/neovim
    ```sh
    brew install neovim
-
+   ```
 3. Install iterm2
    https://iterm2.com/downloads.html
    ```sh
    brew install --cask iterm2
-
+   ```
 4. Copy iterm2 Profile
    ```sh
    cp ./iterm2/toky_style.json ~/toky_style.json
-
+   ```
 5. iterm2 > settings > Other actions > Import Profile-JSON
 
 ## Zsh-configuration
@@ -60,10 +60,11 @@ To install the configuration from the offical repository https://brew.sh/
 1. Use the script:
    ```sh
    ./config_zsh.sh
-
+    ```
 2. Reload the shell:
    ```sh
    source ~/.zshrc
+   ```
 ## Zsh plugins
 
 1. Plugin zsh-highlighting:
@@ -83,21 +84,22 @@ To install the configuration from the offical repository https://brew.sh/
 1. Use the script:
    ```sh
    ./config_neovim.sh
-
+    ```
 2. Open nvim:
    ```sh
    nvim
-
+    ```
 3. Install Nvim-plugin:
    ```sh
    :PlugInstall
-   ````
+   ```
    now quit nvim
 
 4. Reload Nvim:
    ```sh
    source ~/.config/nvim/init.lua
-   
+   ```
 5. Open nvim without failures:
    ```sh
    nvim
+   ```
