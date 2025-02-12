@@ -6,7 +6,7 @@ Config files for my Neovim, Zsh, and other development tools and utilities.
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Homebrew](#homebrew)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
@@ -26,3 +26,14 @@ To install the configurations from this repository, follow these steps:
    ```sh
    git clone https://github.com/bedamaurice/devstuff.git
    cd devstuff
+
+2. UbuntuOS:
+   ```sh
+   ./install.sh
+
+## Homebrew for MacOS
+To install the configuration from the offical repository https://brew.sh/
+
+1. Clone the repository
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
