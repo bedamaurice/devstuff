@@ -34,6 +34,11 @@ To install the configurations from this repository, follow these steps:
 ## Homebrew for MacOS
 To install the configuration from the offical repository https://brew.sh/
 
-1. Clone the repository
+1. Install Homebrew with the offical script:
    ```sh
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. Neovim install with Homebrew:
+   https://formulae.brew.sh/formula/neovim
+   ```sh
+   brew install neovim
