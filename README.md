@@ -60,7 +60,7 @@ To install the configuration from the offical repository https://brew.sh/
    ```sh
    ./config_zsh.sh
 
-2. Reload the shell
+2. Reload the shell:
    ```sh
    source ~/.zshrc
 ## Zsh plugins
@@ -71,7 +71,7 @@ To install the configuration from the offical repository https://brew.sh/
    echo source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >> ~/.zshrc
    ```
 
-2. Plugin zsh-autosuggestions
+2. Plugin zsh-autosuggestions:
    ```sh
    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
    echo source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
@@ -97,6 +97,6 @@ To install the configuration from the offical repository https://brew.sh/
    ```sh
    source ~/.config/nvim/init.lua
    
-5. Open nvim without failures
+5. Open nvim without failures:
    ```sh
    nvim
