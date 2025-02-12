@@ -55,7 +55,7 @@ if [ $APT_Install = "y" ]; then
         sudo apt install -y $PACKAGES
         log_action "Package installation complete"
         nvim --version
-        #zsh --version
+        zsh --version
         echo "Packages installed successfully."
 #    fi
 fi
