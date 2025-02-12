@@ -16,7 +16,9 @@ if [ $dshell = "y" ]; then
     echo "You want change the .zshrc config? (y=yes)"
     read ch_zshrc
     if [ $ch_zshrc = "y" ]; then
-        mv $ZSHRC_CONFIG $ZSHRC_CONFIG.bak
+        if [ -f $ZSHRC_CONFIG ];then     
+            mv $ZSHRC_CONFIG $ZSHRC_CONFIG.bak
+        fi
         cp ./zsh/.zshrc $HOME/.zshrc
         mkdir -p $HOME/.zsh
         if [ -f $ZSHRC_CONFIG ];then
