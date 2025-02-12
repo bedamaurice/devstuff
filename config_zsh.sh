@@ -29,8 +29,8 @@ if [ $dshell = "y" ]; then
     echo "You want to use the alias-zsh? (y=yes)"
     read al_zshrc
     if [ $al_zshrc = "y" ]; then
-        mkdir -p ~/.zsh
-        cp ./zsh/zsh-alias/zsh-alias.zsh ~/.zsh/zsh-alias/zsh-alias.zsh
+        mkdir -p $HOME/.zsh/zsh-alias
+        cp ./zsh/zsh-alias/zsh-alias.zsh $HOME/.zsh/zsh-alias/zsh-alias.zsh
         echo source $HOME/.zsh/zsh-alias/zsh-alias.zsh >> ~/.zshrc
     fi
 fi
