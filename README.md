@@ -64,3 +64,26 @@ To install the configuration from the offical repository https://brew.sh/
    ```sh
    source ~/.zshrc
 
+## Neovim configuration
+
+1. Use the script:
+   ```sh
+   ./config_neovim.sh
+
+2. Open nvim:
+   ```sh
+   nvim
+
+3. Install Nvim-plugin:
+   ```sh
+   :PlugInstall
+
+now quit nvim
+
+4. Reload Nvim:
+   ```sh
+   source ~/.config/nvim/init.lua
+   
+5. Open nvim without failures
+   ```sh
+   nvim
