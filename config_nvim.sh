@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 CONFIG_FILE=$HOME/.config/nvim/init.lua
 ## Configure Neovim
 echo "Do you want configure neovim with vim-plug as pluginmanager and some lua configs? (y=yes)"
