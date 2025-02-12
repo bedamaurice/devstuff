@@ -7,7 +7,8 @@ Config files for my Neovim, Zsh, and other development tools and utilities.
 - [Features](#features)
 - [Installation](#installation)
 - [Homebrew](#homebrew)
-- [Configuration](#configuration)
+- [Zsh-configuration](#Zsh-configuration)
+- [Neovim-configuration](#Neovim-configuration)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -54,7 +55,7 @@ To install the configuration from the offical repository https://brew.sh/
 
 5. iterm2 > settings > Other actions > Import Profile-JSON
 
-## Zsh configuration
+## Zsh-configuration
 
 1. Use the script:
    ```sh
@@ -77,7 +78,7 @@ To install the configuration from the offical repository https://brew.sh/
    echo source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
    ```
 
-## Neovim configuration
+## Neovim-configuration
 
 1. Use the script:
    ```sh
