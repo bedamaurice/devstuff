@@ -25,7 +25,7 @@ To install the configurations from this repository, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/bedamaurice/devstuff.git
+   git clone https://github.com/bedamaurice/devstuff
    cd devstuff
     ```
 2. UbuntuOS:
