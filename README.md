@@ -63,6 +63,19 @@ To install the configuration from the offical repository https://brew.sh/
 2. Reload the shell
    ```sh
    source ~/.zshrc
+## Zsh plugins
+
+1. Plugin zsh-highlighting:
+   ```sh
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+   echo source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >> ~/.zshrc
+   ```
+
+2. Plugin zsh-autosuggestions
+   ```sh
+   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+   echo source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
+   ```
 
 ## Neovim configuration
 
