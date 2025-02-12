@@ -12,7 +12,11 @@ if [ $Neovim_config = "y" ];then
     cp -r ./neovim/lua $HOME/.config/nvim/
 
     #save and move the init.lua to the directory
-    mv $CONFIG_FILE $CONFIG_FILE.bak
+    if [ -f $CONFIG_FILE ]; then
+        echo "rename the old configfile $CONFIG_FILE to $CONFIG_FILE.bak file"
+        mv $CONFIG_FILE $CONFIG_FILE.bak
+    else
+        echo "configfile init.lua will created.."
     cp ./neovim/init.lua $CONFIG_FILE
 
     # Run Neovim in headless mode and execute PlugInstall command
