@@ -53,3 +53,14 @@ To install the configuration from the offical repository https://brew.sh/
    cp ./iterm2/toky_style.json ~/toky_style.json
 
 5. iterm2 > settings > Other actions > Import Profile-JSON
+
+## Zsh configuration
+
+1. Use the script:
+   ```sh
+   ./config_zsh.sh
+
+2. Reload the shell
+   ```sh
+   source ~/.zshrc
+
