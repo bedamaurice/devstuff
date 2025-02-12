@@ -78,7 +78,7 @@ To install the configuration from the offical repository https://brew.sh/
    ```sh
    :PlugInstall
 
-now quit nvim
+   now quit nvim
 
 4. Reload Nvim:
    ```sh
