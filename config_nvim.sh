@@ -18,6 +18,7 @@ if [ $Neovim_config = "y" ];then
     else
         echo "configfile init.lua will created.."
     cp ./neovim/init.lua $CONFIG_FILE
+    fi
 
     # Run Neovim in headless mode and execute PlugInstall command
     nvim -es -u "$CONFIG_FILE" -i NONE -c "PlugInstall" -c "qa"
