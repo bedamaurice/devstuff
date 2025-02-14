@@ -83,7 +83,7 @@ To install the configuration from the offical repository https://brew.sh/
 
 1. Use the script:
    ```sh
-   ./config_neovim.sh
+   ./config_nvim.sh
     ```
 2. Open nvim:
    ```sh
