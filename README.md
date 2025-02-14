@@ -9,7 +9,7 @@ Config files for my Neovim, Zsh, and other development tools and utilities.
 - [Homebrew](#homebrew)
 - [Zsh-configuration](#Zsh-configuration)
 - [Neovim-configuration](#Neovim-configuration)
-- [Contributing](#contributing)
+- [Docker-configuration](#Docker-configuration)
 - [License](#license)
 
 ## Introduction
@@ -110,3 +110,22 @@ To install the configuration from the offical repository https://brew.sh/
    ```sh
    nvim
    ```
+## Docker-configuration
+
+1. Install docker.io & compose-v2:
+   ```sh
+   ./docker_install.sh
+    ```
+2. User permissions to the current user:
+   ```sh
+   sudo usermod -aG docker $USER
+    ```
+    reboot now
+
+3. Check docker installation:
+   ```sh
+   docker run hello-world
+   ```
+   
+
+
