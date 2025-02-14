@@ -2,6 +2,14 @@
 alias vi="nvim"
 alias viz="nvim ~/.zshrc"
 
+#docker alias
+alias doco='docker compose up -d'
+alias docd='docker compose down'
+alias dola='docker ls -a'
+alias dovo='docker volumes ls'
+alias donw='docker network ls'
+
+
 # Update and upgrade system
 alias update='sudo apt update && sudo apt upgrade -y'
 
