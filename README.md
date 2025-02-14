@@ -49,11 +49,18 @@ To install the configuration from the offical repository https://brew.sh/
    ```sh
    brew install --cask iterm2
    ```
+<!--
 4. Copy iterm2 Profile
    ```sh
    cp ./iterm2/toky_style.json ~/toky_style.json
    ```
+   -->
 5. iterm2 > settings > Other actions > Import Profile-JSON
+
+6. Install nerdfont https://github.com/ryanoasis/nerd-fonts
+   ```sh
+   brew install font-hack-nerd-font
+   ```
 
 ## Zsh-configuration
 
