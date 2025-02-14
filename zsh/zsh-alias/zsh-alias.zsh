@@ -5,7 +5,7 @@ alias viz="nvim ~/.zshrc"
 #docker alias
 alias doco='docker compose up -d'
 alias docd='docker compose down'
-alias dola='docker ls -a'
+alias dola='docker ps -a'
 alias dovo='docker volume ls'
 alias donw='docker network ls'
 
