@@ -9,4 +9,4 @@ if [ doin == "y" ];then
 else
     exit 1
 fi
-
+echo "reboot the system for use docker"
