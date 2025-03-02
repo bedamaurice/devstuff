@@ -1,24 +1,20 @@
 -- ~/.config/nvim/init.lua
 --
--- Deaktiviere den Perl-Provider
-vim.g.loaded_perl_provider = 0
--- Deaktivieren des Ruby-Providers (falls nicht benötigt)
-vim.g.loaded_ruby_provider = 0
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
-Plug 'vim-airline/vim-airline'  
-Plug 'folke/tokyonight.nvim'
-Plug 'morhetz/gruvbox'
-Plug 'sheerun/vim-polyglot'
+-- Add mainscreen
+Plug 'goolord/alpha-nvim'
 
-Plug 'echasnovski/mini.nvim'
+-- Plug 'morhetz/gruvbox'
+Plug 'folke/tokyonight.nvim'
+-- Add lualine plugin
+Plug 'nvim-lualine/lualine.nvim'
 
 -- Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 -- Golang
 Plug('fatih/vim-go', { ['tag'] = '*' })
-
 
 -- fzf Plugin
 Plug('junegunn/fzf', { ['do'] = vim.fn['fzf#install'] })
@@ -29,6 +25,9 @@ Plug 'junegunn/fzf.vim'
 -- Nerdtree
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+
+-- Git
+Plug 'tpope/vim-fugitive'
 
 vim.call('plug#end')
 
@@ -62,7 +61,7 @@ set.ignorecase = true
 set.wildmenu = true
 
 -- Highlight the current line
-set.cursorline = true
+-- set.cursorline = true
 
 -- Show line numbers
 set.number = true
@@ -87,24 +86,22 @@ set.history = 1000
 
 -- init.lua
 vim.opt.runtimepath:append("~/.config/nvim/lua/")
--- Lade die NERDTree Konfigurationsdatei
+
+-- load nerdtree config
 require('nerdtree_config')
--- Lade die Airline Konfigurationsdatei
-require('airline_config')
+
+-- load lualine_config 
+require('lualine_config')
+
 -- Lade die Tokyo Night Konfigurationsdatei
 require('tokyonight_config')
+
 -- Lade die fzf Konfigurationsdatei
 require('fzf_config')
 
--- Map cmd + c to copy in normal mode using pbcopy
-vim.api.nvim_set_keymap('n', '<D-c>', ':w !pbcopy<CR><CR>', { noremap = true, silent = true })
-
--- Map cmd + c to copy in visual mode using pbcopy
-vim.api.nvim_set_keymap('v', '<D-c>', ':w !pbcopy<CR><CR>', { noremap = true, silent = true })
+-- load alpha dashboard config
+require('alpha_config')
 
 -- Enable system clipboard
 vim.o.clipboard = 'unnamedplus'
-
--- Disable clipboard for dd command
-vim.api.nvim_set_keymap('n', 'dd', '"_dd', { noremap = true, silent = true })
 
