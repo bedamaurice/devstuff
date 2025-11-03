@@ -7,6 +7,7 @@ Config files for my Neovim, Zsh, and other development tools and utilities.
 ```
 git config --global user.email "email@example.com"
 git config --global user.name "Name"
+```
 
 ## Table of Contents
 - [Introduction](#introduction)
